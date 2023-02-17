@@ -62,7 +62,7 @@ final class ConverterTests: XCTestCase {
         let output1 = sut.convertToCelsius(fahrenheit: input1)
         
         //Then assert
-        XCTAssertEqual(output1, 0)
+        XCTAssertEqual(output1, 0, accuracy: 0.000001)
         
     
     }
@@ -77,7 +77,7 @@ final class ConverterTests: XCTestCase {
         let output2 = sut.convertToCelsius(fahrenheit: input2)
         
         //then
-        XCTAssertEqual(output2, 100)
+        XCTAssertEqual(output2, 100, accuracy: 0.000001)
         
         
     }
