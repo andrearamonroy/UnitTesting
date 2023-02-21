@@ -16,6 +16,7 @@
 		0D02ADB6299177B3007E61EB /* UnitTestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02ADB5299177B3007E61EB /* UnitTestingUITestsLaunchTests.swift */; };
 		0D02ADC3299177DD007E61EB /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02ADC2299177DD007E61EB /* Converter.swift */; };
 		0D02ADC5299178BB007E61EB /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02ADC4299178BB007E61EB /* ConverterTests.swift */; };
+		0D02ADC729A029C4007E61EB /* ThrowingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02ADC629A029C4007E61EB /* ThrowingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0D02ADB5299177B3007E61EB /* UnitTestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0D02ADC2299177DD007E61EB /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		0D02ADC4299178BB007E61EB /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		0D02ADC629A029C4007E61EB /* ThrowingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				0D02ADA9299177B3007E61EB /* UnitTestingTests.swift */,
 				0D02ADC4299178BB007E61EB /* ConverterTests.swift */,
+				0D02ADC629A029C4007E61EB /* ThrowingTests.swift */,
 			);
 			path = UnitTestingTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				0D02ADC5299178BB007E61EB /* ConverterTests.swift in Sources */,
 				0D02ADAA299177B3007E61EB /* UnitTestingTests.swift in Sources */,
+				0D02ADC729A029C4007E61EB /* ThrowingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
