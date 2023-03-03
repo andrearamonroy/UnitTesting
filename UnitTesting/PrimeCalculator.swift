@@ -8,16 +8,11 @@
 import Foundation
 
 struct PrimeCalculator {
-     
-    static func calculate(upTo max: Int, completion: @escaping ([Int]) -> Void){
-        
-        // push our work straight to a background thread
-        DispatchQueue.global().async {
-            guard max > 1 else {
-                //if the input value is 0 or 1 exit immediately
-                return
-            }
-            
+    static func calculate(upTo max: Int) -> [Int] {
+         guard max > 1 else {
+            return []
+   }
+
             
             // mark all our numbers as prime
             //Repeating: reserves enough space to store the specified number of elements.
@@ -44,8 +39,8 @@ struct PrimeCalculator {
             // collapse our results down to a single array of primes
             let primes = sieve.enumerated().compactMap {$1 ==
                 true ? $0 : nil  }
-            completion(primes)
+          return primes
         }
         
     }
-}
+

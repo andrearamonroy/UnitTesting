@@ -1,14 +1,14 @@
 //
-//  AsynchronousTests.swift
+//  NotificationsTests.swift
 //  AsynchronousTests
 //
-//  Created by Andrea Monroy on 2/25/23.
+//  Created by Andrea Monroy on 3/2/23.
 //
 
 import XCTest
 @testable import UnitTesting
 
-final class AsynchronousTests: XCTestCase {
+final class NotificationsTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,23 +28,41 @@ final class AsynchronousTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
+       
         }
     }
     
-//    func testPrimesUpTo100Should0(){
-//        
-//        //given
-//        let maxCount = 100
-//        let expectation = XCTestExpectation(description: "calculate primes up to \(maxCount)")
-//       
-//        //when
-//        PrimeCalculator.calculate(upTo: maxCount) {
-//             XCTAssertEqual($0.count, 25)
-//             expectation.fulfill()
-//       }
-//          wait(for: [expectation], timeout: 10)
-//    }
+    
+  
+
+    func testUserUpgradedPostsNotification(){
+        
+        //given
+        let user = User()
+        let center = NotificationCenter()
+        let expectation = XCTNSNotificationExpectation(name: User.upgradedNotification, object: nil, notificationCenter: center)
+        
+        //perfomrs custom evaluation of matching notifications
+        expectation.handler = { notification -> Bool in
+            guard let level = notification.userInfo?["level"] as? String
+            else {
+                return false
+            }
+            if level == "gold" {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        //when
+        user.update(using: center)
+        
+        //then
+        wait(for: [expectation], timeout: 3)
+    }
+
 
 }

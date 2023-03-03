@@ -1,14 +1,14 @@
 //
-//  AsynchronousTests.swift
-//  AsynchronousTests
+//  primeCalculatorTests.swift
+//  UnitTestingTests
 //
-//  Created by Andrea Monroy on 2/25/23.
+//  Created by Andrea Monroy on 3/2/23.
 //
 
 import XCTest
 @testable import UnitTesting
 
-final class AsynchronousTests: XCTestCase {
+final class primeCalculatorTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,23 +28,10 @@ final class AsynchronousTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
+            _ = PrimeCalculator.calculate(upTo: 1_000_000)
         }
     }
-    
-//    func testPrimesUpTo100Should0(){
-//        
-//        //given
-//        let maxCount = 100
-//        let expectation = XCTestExpectation(description: "calculate primes up to \(maxCount)")
-//       
-//        //when
-//        PrimeCalculator.calculate(upTo: maxCount) {
-//             XCTAssertEqual($0.count, 25)
-//             expectation.fulfill()
-//       }
-//          wait(for: [expectation], timeout: 10)
-//    }
 
 }
